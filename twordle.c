@@ -38,7 +38,7 @@ int main() {
 		
 		correct = compareGuess(guesses, answer, correctLetters, guessNum);
 		printf("================================\n");
-	}while(!correct);
+	}while(!correct && guessNum != 6);
 	
 	if(correct) {
 		gameWon(guesses, guessNum);
@@ -74,11 +74,13 @@ void getGuess(char guesses[][STR_CAP], int guessNum){
 				
 			} else if (guesses[guessNum - 1][i] >= 97 && guesses[guessNum - 1][i] <= 122) {
 				lettersGood = true;
+				i++;
 			} else {
 				lettersGood = false;
+				for(i ; guesses[guessNum - 1][i] != '\0' ; i++) {
+				}
 			}
-			i++;
-		}while(guesses[guessNum - 1][i] != '\0' && lettersGood);
+		}while(guesses[guessNum - 1][i] != '\0');
 		
 		if (i != 5) {
 			lengthGood = false;
@@ -97,7 +99,7 @@ void getGuess(char guesses[][STR_CAP], int guessNum){
 		if (!lettersGood || !lengthGood) {
 			printf("\nPlease try again: ");
 		}
-	}while(!lettersGood && !lengthGood);
+	}while(!lettersGood || !lengthGood);
 }
 
 bool compareGuess(char guesses[][STR_CAP], char answer[], char correctLetters[][6], int guessNum) {
