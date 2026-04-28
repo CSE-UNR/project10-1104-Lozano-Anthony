@@ -1,0 +1,7 @@
+SCOREBOARD:
+ID      Score
+NUL    9
+NUL    9
+NUL    9
+NUL    9
+NUL    9
