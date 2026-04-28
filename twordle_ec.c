@@ -153,7 +153,7 @@ bool compareGuess(char guesses[][STR_CAP], char answer[], char correctLetters[][
 						}
 				} else {
 					for(temp = guessInd - 1; temp >= 0; temp--){
-						if(guesses[guessNum - 1][guessInd] == guesses[guessNum - 1][temp] || guesses[guessNum - 1][guessInd] == guesses[guessNum - 1][temp] - CASE_VALUE) {
+						if(guesses[guessNum - 1][guessInd] == guesses[guessNum - 1][temp] || guesses[guessNum - 1][guessInd] == guesses[guessNum - 1][temp] + CASE_VALUE) {
 							nonDoubleMatch = true;
 						}
 					}

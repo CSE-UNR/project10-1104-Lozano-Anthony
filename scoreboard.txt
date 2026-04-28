@@ -1,7 +1,7 @@
 SCOREBOARD:
 ID      Score
-NUL    9
-NUL    9
-NUL    9
-NUL    9
-NUL    9
+ALW     6
+NUL     9
+NUL     9
+NUL     9
+NUL     9
